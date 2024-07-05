@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script type="text/javascript" src="renderImages.js"></script> -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Azmazone Page</title>
+    <link rel="stylesheet" href="/amazonestyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="icon">
+          <a href="#"><img src="images/amazon_logo.png" alt="logo" /></a>
+        </div>
+        <div class="address">
+          <a href="#" class="deliver">Deliver</a>
+          <div class="map-icon">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="#" class="location">India</a>
+          </div>
+        </div>
+        <div class="nev-search">
+          <select class="select-search" onclick="this.style.display='block'">
+            <option>All</option>
+            <option>All Categories</option>
+            <option>Amazone Devices</option>
+          </select>
+
+          <div>
+            <input
+              type="text"
+              placeholder="Search Amazone"
+              class="search-input"
+            />
+          </div>
+          <div class="nev-searchIcon">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+
+        <div class="sing-in">
+          <a href="#"
+            ><p>Hello,sing in</p>
+            <span>Account &amp; Lists</span></a
+          >
+        </div>
+        <div class="returns">
+          <a href="#"
+            ><p>Returns</p>
+            <span>&amp;Orders</span></a
+          >
+        </div>
+        <div class="cart">
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          <strong>Cart</strong>
+        </div>
+      </nav>
+
+      <div class="secondnav">
+        <div class="secondnav-left">
+          <ul>
+            <div class="hambericon">
+              <div class="hambergon" onclick="openNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div id="mySidenav" class="dropdown-content">
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  >&times;</a
+                >
+                <a href="#" id="home" onclick="openWin()">Home</a>
+                <a href="#" class="about">About</a>
+                <a href="#" class="contect-us">Contect us</a>
+                <a href="#" class="use-me">Use me</a>
+              </div>
+            </div>
+            <li>All</li>
+            <li>Today's Deals</li>
+            <li>Customer Service</li>
+            <li>Registry</li>
+            <li>Gift Cards</li>
+            <li>Sell</li>
+          </ul>
+        </div>
+        <div class="secondnav-right">
+          <ul>
+            <li>Shop detail in Electronocs</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <img src="/images/hero-img.jpg" class="hero-img" />
+    </div>
+
+    <div class="shop" id="aa">
+      <div class="img-shop">
+        <h1 class="aa">Shop Laptops & Tables</h1>
+        <img src="/images/img-1.png" class="laptop img" />
+      </div>
+      <div class="img-shop" id="bb">
+        <h1 class="aa">Shop Smartwatches</h1>
+        <img src="/images/img-2.png" />
+      </div>
+      <div class="img-shop" id="cc">
+        <h1 class="aa">Create with Strip lights</h1>
+        <img src="/images/img-3.png" />
+      </div>
+      <div class="img-shop" id="dd">
+        <h1 class="aa">Home Refresh Ideas</h1>
+        <img src="/images/img-4.png" />
+      </div>
+    </div>
+
+    <script>
+      // document.addEventListener("click", function (event) {
+      //   let target = event.target;
+      //   console.log(target);
+      //   const hamberRef = document.querySelector(".hambergon");
+      //   if (target === hamberRef) {
+      //     const dropRef = document.querySelector(".dropdown-content");
+      //     dropRef.style.display = "block";
+      //   } else {
+      //     const dropRef = document.querySelector(".dropdown-content");
+      //     dropRef.style.display = "none";
+      //   }
+      // });
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "25%";
+        document.getElementById("mySidenav").style.textAlign = "center";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      function openWin() {
+        window.open("http://127.0.0.1:5500/home.html");
+        // document.getElementById("home").style.width = "100%";
+      }
+      // const searchRef = document.querySelector(".search-input");
+
+      // searchRef.addEventListener("change", function (e) {
+      //   let target = e.target.value;
+      //   console.log(target);
+      //   const find = [
+      //     "Shop Laptops & Tables",
+      //     "Shop Smartwatches",
+      //     "Create with Strip lights",
+      //     "Home Refresh Ideas",
+      //   ];
+      //   const imgRef = document.quearySelectorAll(".img-shop img");
+
+      //   //  console.log(haa);
+      //   for (let i = 0; i < find.length; i++) {
+      //     if (find[i] === target) {
+      //       // abc.push(target);
+      //       //console.log(target, "kkkkkkkkkk");
+      //       const aaRef = document.getElementById(".aa");
+
+      //       const bbRef = document.getElementById(".bb");
+      //       const ccRef = document.getElementById(".cc");
+      //       const ddRef = document.getElementById(".dd");
+      //       if (find[i] == aaRef) {
+      //         imgRef.style.display = "block";
+      //       } else if (find[i] == bbRef) {
+      //         imgRef.style.display = "block";
+      //       } else if (find[i] == ccRef) {
+      //         imgRef.style.display = "block";
+      //       } else if (find[i] == ddRef) {
+      //         imgRef.style.display = "block";
+      //       }
+      //     } else {
+      //       imgRef.style.display = "none";
+      //     }
+      //   }
+      // });
+    </script>
+  </body>
+</html>
